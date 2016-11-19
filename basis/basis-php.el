@@ -19,3 +19,5 @@
 
 (require 'flymake-php)
 (add-hook 'php-mode-hook 'flymake-php-load)
+
+(provide 'basis-php)

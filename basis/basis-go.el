@@ -30,4 +30,4 @@
 ;;去除多余的联想
 (add-hook 'go-mode-hook #' (lambda() (setq ac-sources '(ac-source-go ac-source-abbrev ac-source-dictionary))))
 
-
+(provide 'basis-go)
