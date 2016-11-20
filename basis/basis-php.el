@@ -5,7 +5,7 @@
     (package-refresh-contents)
     (package-install 'ac-php )
     )
-  (require 'cl)
+  (with-no-warnings (require 'cl))
   (require 'php-mode)
   (add-hook 'php-mode-hook
             '(lambda ()
