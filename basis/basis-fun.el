@@ -39,7 +39,8 @@
 (setq auto-mode-alist
       (append
        '(("\\.js\\'" . js2-mode)
-	 ("\\.html\\'" . web-mode))
+	 ("\\.html\\'" . web-mode)
+	 ("\\.asm\\'". nasm-mode))
        auto-mode-alist))
 
 

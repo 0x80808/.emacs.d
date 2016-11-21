@@ -1,5 +1,6 @@
 ;;加载主题
 (load-theme 'solarized-dark t)
+;;(load-theme 'sanityinc-tomorrow-bright t)
 ;;全屏设置
 (set-frame-position (selected-frame) 0 0)
 (setq default-frame-alist '((height . 49) (width . 178) (menu-bar-lines . 0) (tool-bar-lines . 0))) 
