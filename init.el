@@ -22,7 +22,7 @@
  '(company-minimum-prefix-length 1)
  '(package-selected-packages
    (quote
-    (js2-mode counsel popwin exec-path-from-shell nasm-mode swiper solarized-theme neotree hungry-delete go-mode go-autocomplete flymake-php company ac-php))))
+    (web-mode js2-mode counsel popwin exec-path-from-shell nasm-mode swiper solarized-theme neotree hungry-delete go-mode go-autocomplete flymake-php company ac-php))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

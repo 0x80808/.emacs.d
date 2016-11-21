@@ -1,9 +1,9 @@
 ;;基础配置,加载melpa的pkg
 (when (>= emacs-major-version 24)
-  ;;(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
-  (setq package-archives '(("gnu"   . "http://elpa.zilongshanren.com/gnu/")
-			   ("melpa" . "http://elpa.zilongshanren.com/melpa/"))
- ))
+  (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+  ;;(setq package-archives '(("gnu"   . "http://elpa.zilongshanren.com/gnu/")
+  ;;                         ("melpa" . "http://elpa.zilongshanren.com/melpa/")))
+ )
 ;;读取path路径
 (defun set-exec-path-from-shell-PATH ()
   (let ((path-from-shell (replace-regexp-in-string

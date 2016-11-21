@@ -24,6 +24,26 @@
 					 try-expand-line
 					 try-complete-lisp-symbol-partially
 					 try-complete-lisp-symbol))
+;;光标位于中间显示括号
+(define-advice show-paren-function (:around (fn) fix-show-paren-function)
+  (cond ((looking-at-p "\\s(") (funcall fn))
+	(t (save-excursion
+	     (ignore-errors (backward-up-list))
+	     (funcall fn)))))
+;;emacs删除windows下的换行符
+(defun remove-dos-eol()
+  (interactive)
+  (goto-char (point-min))
+  (while (search-forward "\r" nil t) (replace-match "")))
+;;文件自动加载mode
+(setq auto-mode-alist
+      (append
+       '(("\\.js\\'" . js2-mode)
+	 ("\\.html\\'" . web-mode))
+       auto-mode-alist))
+
+
+
 
 
 (provide 'basis-fun)
