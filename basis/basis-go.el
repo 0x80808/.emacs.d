@@ -21,7 +21,7 @@
   ;;函数跳转
   (local-set-key (kbd "M-d") 'godef-jump)
   ;;函数回跳
-  (local-set-key (kbd "M-*") 'pop-tag-mark))
+  (local-set-key (kbd "M-2") 'pop-tag-mark))
 (add-hook 'go-mode-hook 'my-go-mode-hook)
 ;;go自动补齐
 (with-eval-after-load 'go-mode (require 'go-autocomplete))
