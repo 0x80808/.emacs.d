@@ -23,5 +23,7 @@
 (global-company-mode t)
 ;;yes与no的别名
 (fset 'yes-or-no-p 'y-or-n-p)
+;;iedit
+(require 'iedit)
 
 (provide 'basis-init)
