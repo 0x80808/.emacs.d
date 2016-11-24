@@ -22,7 +22,7 @@
  '(company-minimum-prefix-length 1)
  '(package-selected-packages
    (quote
-    (iedit expand-region web-mode js2-mode counsel popwin exec-path-from-shell nasm-mode swiper solarized-theme neotree hungry-delete go-mode go-autocomplete flymake-php company ac-php)))
+    (helm-ag iedit expand-region web-mode js2-mode counsel popwin exec-path-from-shell nasm-mode swiper solarized-theme neotree hungry-delete go-mode go-autocomplete flymake-php company ac-php)))
  '(popwin:popup-window-position (quote right))
  '(popwin:popup-window-width 50))
 (custom-set-faces

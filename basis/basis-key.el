@@ -18,6 +18,8 @@
 (global-set-key (kbd "M-m") 'set-mark-command)
 ;;区域选中（同上） c + - + = 可以缩小选中的区域
 (global-set-key (kbd "C-=") 'er/expand-region)
+;;ag代码搜索
+(global-set-key (kbd "M-s a") 'helm-do-ag-project-root)
 
 
 (provide 'basis-key)
