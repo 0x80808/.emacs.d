@@ -20,6 +20,8 @@
 (global-set-key (kbd "C-=") 'er/expand-region)
 ;;ag代码搜索
 (global-set-key (kbd "M-s a") 'helm-do-ag-project-root)
+;;手动开启company-mode自动补全
+(global-set-key (quote [C-tab]) 'company-mode) 
 
 
 (provide 'basis-key)

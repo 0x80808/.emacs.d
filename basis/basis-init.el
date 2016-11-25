@@ -19,8 +19,8 @@
 (delete-selection-mode t)
 ;;语法高亮
 (global-font-lock-mode t)
-;;自动补全
-(global-company-mode t)
+;;手动打开自动补全 M+x company-mode
+(autoload 'company-mode "company" nil t)
 ;;yes与no的别名
 (fset 'yes-or-no-p 'y-or-n-p)
 ;;iedit
