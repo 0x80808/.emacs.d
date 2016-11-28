@@ -25,5 +25,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 ;;iedit
 (require 'iedit)
+;;emacs-lisp-mode模式下自动开启补全模式
+(add-hook 'emacs-lisp-mode-hook 'company-mode)
 
 (provide 'basis-init)
