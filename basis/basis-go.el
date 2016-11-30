@@ -1,15 +1,16 @@
 ;; go-mode引入
 (require 'go-mode)
-;;配置gopath
-(setenv "GOPATH" (concat ""
-			 "/Users/lvc/Documents/lvcgo:"
-			 "/Users/lvc/Documents/go:"
-			 ))
-;;加载go bin路径
-(add-to-list 'exec-path (expand-file-name "/usr/local/go/bin"))
-(add-to-list 'exec-path (expand-file-name "/Users/lvc/Documents/lvcgo/bin"))
 ;;golang其他配置
 (defun my-go-mode-hook()
+  ;;加载go bin路径
+  (add-to-list 'exec-path (expand-file-name "/usr/local/go/bin"))
+  (add-to-list 'exec-path (expand-file-name "/Users/lvc/Documents/lvcgo/bin"))
+  ;;配置gopath
+  (setenv "GOPATH" (concat ""
+			   "/Users/lvc/Documents/lvcgo:"
+			   "/Users/lvc/Documents/go"
+			   ))
+  ;;包管理
   (setq gofmt-command "goimports")
   ;;去除多余的联想
   (setq ac-sources '(ac-source-go ac-source-abbrev ac-source-dictionary))
@@ -34,16 +35,11 @@
   (add-hook 'go-mode-hook #' (lambda() (setq ac-sources '(ac-source-go ac-source-abbrev ac-source-dictionary)))))
 ;;golang语法检测
 (add-hook 'go-mode-hook 'flycheck-mode)
-;; (eval-after-load "go-mode"
-;;   '(progn
-;;      (flycheck-declare-checker go-gofmt
-;;        "A Go syntax and style checker using the gofmt utility."
-;;        :command '("gofmt" source-inplace)
-;;        :error-patterns '(("^\\(?1:.*\\):\\(?2:[0-9]+\\):\\(?3:[0-9]+\\): \\(?4:.*\\)$" error))
-;;        :modes 'go-mode)
-;;      (add-to-list 'flycheck-checkers 'go-gofmt)))
-
-
+;;go run file
+(defun go-run-buffer()
+  (interactive)
+  (shell-command (concat "go run " (buffer-name))))
+(define-key go-mode-map (kbd "<f3>") 'go-run-buffer)
 
 
 (provide 'basis-go)

@@ -2,9 +2,10 @@
 (load-theme 'solarized-dark t)
 ;;(load-theme 'sanityinc-tomorrow-bright t)
 ;;全屏设置
-(set-frame-position (selected-frame) 0 0)
-(setq default-frame-alist '((height . 49) (width . 178) (menu-bar-lines . 0) (tool-bar-lines . 0))) 
-;;(setq initial-frame-alist (quote ((fullscreen . maximized))))
+(require 'maxframe)
+(add-hook 'window-setup-hook 'maximize-frame t)
+;; (setq default-frame-alist '((width . 178) (height . 50)))
+;; (set-frame-parameter nil 'fullscreen 'fullboth)
 ;;设置字体
 (set-frame-font "Source Code Pro 14")
 ;;关闭工具栏

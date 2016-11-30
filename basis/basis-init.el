@@ -23,7 +23,7 @@
 (autoload 'company-mode "company" nil t)
 ;;yes与no的别名
 (fset 'yes-or-no-p 'y-or-n-p)
-;;iedit
+;;iedit抓取函数
 (require 'iedit)
 ;;emacs-lisp-mode模式下自动开启补全模式
 (add-hook 'emacs-lisp-mode-hook 'company-mode)
