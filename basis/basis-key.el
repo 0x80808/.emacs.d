@@ -21,7 +21,15 @@
 ;;ag代码搜索
 (global-set-key (kbd "M-s a") 'helm-do-ag-project-root)
 ;;手动开启company-mode自动补全
-(global-set-key (quote [C-tab]) 'company-mode) 
+(global-set-key (quote [C-tab]) 'company-mode)
+;; 撤销
+(global-unset-key (kbd "s-z"))
+(global-set-key (kbd "s-z") 'undo)
+;; 重做
+(global-unset-key (kbd "s-y"))
+(global-set-key (kbd "s-y") 'redo)
+;;复制当前行到下一行
+(global-set-key (kbd "M-p") 'djcb-duplicate-line)
 
 
 (provide 'basis-key)

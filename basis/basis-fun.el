@@ -65,6 +65,19 @@
 	      (regexp-quote sym))))
 	regexp-history)
   (call-interactively 'occur))
+;;复制当前行到下一行
+(defun djcb-duplicate-line (&optional commentfirst)
+  "comment line at point; if COMMENTFIRST is non-nil, comment the original" 
+  (interactive)
+  (beginning-of-line)
+  (push-mark)
+  (end-of-line)
+  (let ((str (buffer-substring (region-beginning) (region-end))))
+    (when commentfirst
+    (comment-region (region-beginning) (region-end)))
+    (insert-string
+      (concat (if (= 0 (forward-line 1)) "" "\n") str "\n"))
+    (forward-line -1)))
 
 
 (provide 'basis-fun)

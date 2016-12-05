@@ -27,5 +27,8 @@
 (require 'iedit)
 ;;emacs-lisp-mode模式下自动开启补全模式
 (add-hook 'emacs-lisp-mode-hook 'company-mode)
+;; 重做
+(require 'redo+)
+(setq undo-no-redo t)
 
 (provide 'basis-init)

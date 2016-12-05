@@ -13,6 +13,7 @@
 (require 'basis-go)
 (require 'basis-php)
 (require 'basis-evil)
+(require 'basis-nasm)
 ;;emacs自动生成
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -23,7 +24,7 @@
  '(company-minimum-prefix-length 1)
  '(package-selected-packages
    (quote
-    (maxframe evil-leader evil flycheck helm-ag iedit expand-region web-mode js2-mode counsel popwin exec-path-from-shell nasm-mode swiper solarized-theme neotree hungry-delete go-mode go-autocomplete flymake-php company ac-php)))
+    (redo+ maxframe evil-leader evil flycheck helm-ag iedit expand-region web-mode js2-mode counsel popwin exec-path-from-shell nasm-mode swiper solarized-theme neotree hungry-delete go-mode go-autocomplete flymake-php company ac-php)))
  '(popwin:popup-window-position (quote right))
  '(popwin:popup-window-width 50))
 (custom-set-faces
