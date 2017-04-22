@@ -30,5 +30,12 @@
 ;; 重做
 (require 'redo+)
 (setq undo-no-redo t)
+;;sr-speedbar可以让speedbar嵌入当前frame中
+(require 'sr-speedbar)
+;;让 Emacs 可以直接打开和显示图片。
+(setq auto-image-file-mode t)
+;;可以M+数字选择窗口
+(window-numbering-mode 1)
+
 
 (provide 'basis-init)
