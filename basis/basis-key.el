@@ -25,6 +25,8 @@
 ;; 撤销
 (global-unset-key (kbd "s-z"))
 (global-set-key (kbd "s-z") 'undo)
+;; 删除当前buffer
+(global-set-key (kbd "s-w") 'kill-buffer-and-window)
 ;; 重做
 (global-unset-key (kbd "s-y"))
 (global-set-key (kbd "s-y") 'redo)

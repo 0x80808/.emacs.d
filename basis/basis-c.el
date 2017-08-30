@@ -1,4 +1,3 @@
-
 ;;c/c++ 配置
 ;; 当 'c-mode 'c++-mode 'java-mode 'asm-mode 加载时，加载 ggtags mode
 ;; (add-hook 'c-mode-common-hook
